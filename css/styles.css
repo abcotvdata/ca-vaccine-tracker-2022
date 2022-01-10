@@ -14,267 +14,319 @@
 
 @font-face {
   font-family: GothamBold;
-  src: url(gothambold/Gotham-Bold.ttf);
+  src: url(../gothambold/Gotham-Bold.ttf);
 }
 
 @font-face {
   font-family: GothamBook;
-  src: url(gothambook/Gotham-Book.otf);
+  src: url(../gothambook/Gotham-Book.otf);
 }
 
-
-
-/*DROPDOWN STYLING*/
-      .dropbtn {
-        background-color: navy;
-        color: white;
-        padding: 12px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-        font-family: 'GothamBook', sans-serif;;
-        margin-bottom: 10px;
-      }
-
-      .dropbtn:hover, .dropbtn:focus {
-        background-color: #436cb5;
-      }
-
-      #myInput {
-         width: 100%;
-         font-size: 16px;
-         padding: 14px 20px 12px 20px;
-         border: none;
-         border-bottom: 1px solid #ddd;
-      }
-
-      #myInput:focus {outline: 3px solid #ddd;}
-
-      .dropdown {
-        position: relative;
-        display: inline-block;
-        margin-top: 20px;
-      }
-
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f6f6f6;
-        min-width: 230px;
-        overflow: auto;
-        border: 1px solid #ddd;
-        z-index: 1;
-
-      }
-
-      .dropdown-content p {
-        color: black;
-        padding: 10px 14px;
-        text-decoration: none;
-        display: block;
-        margin: 5px 0px;
-        /*height: 50vh;*/
-      }
-
-      .countydrop {
-         height: 30vh;
-         overflow: scroll;
-         font-family: 'GothamBook', sans-serif;;
-      }
-
-      .dropdown p:hover {background-color: #ddd;}
-
-      .show {display: block;}
-
-/*END DROPDOWN STYLING*/
-
-
-
-
-
-html {
-   font-family: GothamBook, sans-serif;
-
+* {
+   box-sizing: border-box;
 }
 
-body {
-   overflow: hidden;
-   margin: 0px;
-   padding: 20px;
+h1, h2, h3, h4 {
+   font-family: 'GothamBold';
 }
 
-h1 {
-   margin: 0px;
-}
-
-h3 {
-   margin: 0px;
-}
-
-/*.main-container {
-   max-width: 100%;
+p {
    font-family: GothamBook;
-}*/
-
-.title, .subtitle, .graph-title {
-   font-family: GothamBold, sans-serif;
-   color: white;
-   padding: 10px 5px;
-   margin: 0px;
 }
 
-.graph-title {
-   color: black;
-}
-
-.title {
-   background-color: navy;
-}
-
-.subtitle {
-   background-color: dodgerblue;
-}
-
-.legend {
-  font-family: GothamBold, sans-serif;
-}
-
-.iframe {
+img {
+   display: block;
    width: 100%;
 }
 
-.iframe iframe {
+.background {
+   position: fixed;
+   z-index: -1;
+   top: 0px;
+   left: 0px;
    width: 100%;
-   border: none;
-   height: 400px;
+   height: 100vh;
+   object-fit: cover;
 }
 
-
-.legend {
-   margin-top: 20px;
-}
-
-.daily {
-  color: dodgerblue;
-}
-
-.average {
-  color: navy;
-}
-
-
-.plot {
-   width: 72%;
-   float: right;
-
-}
-
-   .plot img {
+   .background img {
       width: 100%;
+      height: 100vh;
+      object-fit: cover;
    }
 
-.panel {
+
+.content {
+   display: flex;
+}  
+
+
+.leftside {
    width: 25%;
-   float: right;
-   text-align: left;
-   margin-top: 50px;
-   margin-right: 3%;
-   font-size: 15px;
+   margin: 10px;
+   border: 1px solid white;
+   padding: 10px;
+   color: white;
+   text-align: center;
+   position: relative;
+   height: 97vh;
 }
 
-   .panel h3 {
+.tracker-tracker-logo {
+   padding-top: 10px;
+}
+
+.textbox {
+   padding-top: 50px;
+   font-size: 18px;
+   line-height: 32px;
+}
+
+.button-container {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-column-gap: 5px;
+}
+
+.not-side-by-side {
+   display: block;
+   width: 70%;
+   margin: auto;
+}
+
+.not-side-by-side .buttons {
+   margin-top: 10px;
+}
+
+.buttons {
+   background-color: white;
+   color: red;
+   text-align: center;
+   font-size: 15px;
+   padding: 12px 5px;
+   line-height: 16px;
+   cursor: pointer;
+}
+
+.buttons h4 {
+   margin: 0px;
+}
+
+.vaccine-watch-logo {
+   position: absolute;
+   width: 100%;
+   left: 0px;
+   bottom: 10px;
+}
+
+.inner-vaccine-watch-logo {
+   width: 50%;
+   margin: auto;
+}
+
+.rightside {
+   width: 75%;
+   margin: 10px;
+   height: 97vh;
+   /*border: 1px solid white;*/
+   display: flex;
+   flex-direction: column;
+
+}
+
+.iframes {
+   width: 100%;
+   height: 92%;
+   background-color: white;
+}
+
+   .iframes iframe {
+      /*padding-top: 50px;*/
+      width: 100%;
+      height: 100%;
+      border: none;
+
+
+   }
+
+.sections {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-column-gap: 5px;
+   margin-top: 10px;
+   height: 8%;
+
+}
+
+.section {
+   width: 100%;
+   background-color: white;
+   color: red;
+   text-align: center;
+   padding: 18px 10px;
+   height: 100%;
+   font-size: 15px;
+   cursor: pointer;
+}
+
+   .section h4 {
       margin: 0px;
    }
 
-.panel-title h3 {
-   width: auto;
-   background-color: navy;
-   color: white;
-   padding: 5px;
-}  
-
-.panel-number {
-   font-family: GothamBold, sans-serif;
-   font-size: 50px;
+.progress {
+   color: blue;
 }
 
-.panel-1 {
-   padding-bottom: 20px;
+.mobile {
+   display: none;
 }
 
-.level4 h4 {
-   font-family: GothamBook, sans-serif;
-   padding: 0px;
-   margin: 0px;
-   font-style: italic;
-   font-weight: normal;
-   font-size: 12px;
+
+@media only screen and (max-width: 1250px) {
+
+   .textbox {
+      font-size: 18px;
+      line-height: 32px;
+   }
+
+
 }
 
-@media only screen and (max-width: 745px) {
-   .panel {
+
+
+@media only screen and (max-width: 1150px) {
+
+   .textbox {
+      font-size: 16px;
+      line-height: 27px;
+   }
+
+   .buttons {
+      padding: 8px 3px;
+   }
+
+
+   .section {
+      font-size: 13px; 
+      padding: 15px 8px;
+   }
+
+   .not-side-by-side {
+      width: 80%;
+   }
+}
+
+@media only screen and (max-width: 930px) {
+
+   .not-side-by-side {
+      width: 90%;
+   }
+
+   .hosp-vax {
       font-size: 13px;
    }
 
-   .panel-number {
-      font-size: 45px;
+}
+
+@media only screen and (max-width: 735px) {
+
+   .textbox {
+      font-size: 15px;
+      line-height: 25px;
+   }
+
+   .buttons {
+      padding: 5px 2px;
+      font-size: 12px;
+      line-height: 14px;
+   }
+
+   .section {
+      font-size: 12px; 
+      padding: 13px 6px;
    }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 700px) {
 
-   body {
-      overflow: scroll;
+   .content {
+      padding: 10px;
    }
-   
-   .title {
-   font-size: 20px;
-  }
-  
-  .subtitle {
-   font-size: 15px;
-  }
-  
-   .panel {
-      float: none;
-      width: 95%;
-      margin: auto;
-      margin-top: 5px;
-      padding: 5px;
+
+   .mobile {
       display: block;
    }
 
-   .panel-1 {
-      width: 96%;
-      margin: 5px;
-      padding-bottom: 0px;
+   .desktop {
+      display: none;
    }
 
-   .panel-2 {
-      width: 50%;
-      margin: 5px;
-   }
+   .content {
+      display: block;
+   } 
 
-   .plot {
-      float: none;
+   .leftside {
       width: 100%;
+      height: auto;
+      border: none;
+      margin: 0px;
    }
-   
-   #x {
-     font-size: 35px;
+
+   .tracker-tracker-logo {
+      max-width: 320px;
+      margin: auto;
    }
-   
-   .legend {
-     font-size: 13px;
+
+   .textbox {
+      padding-top: 10px;
    }
-   
-  .level4 h4 {
-     font-size: 10px;
+
+   .sections-mobile {
+      width: 80%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5px;
+
    }
-   
+
+   .section {
+      font-size: 15px
+   }
+
+   .rightside {
+      width: 100%;
+      margin: 0px;
+      display: block;
+      background-color: rgba(0,0,0,0);
+      height: auto;
+   }
+
+   .iframes {
+      height: auto;
+      background-color: rgba(0,0,0,0);
+   }
+
+   .iframes iframe {
+      height: 790px;
+      background-color: white;
+
+   }
+
+
+   .vaccine-watch-logo-mobile {
+      margin-top: 20px;
+   }
+
 
 
 }
+
+
+
+
+
+
 
 
 
